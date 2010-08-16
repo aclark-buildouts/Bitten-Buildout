@@ -1,4 +1,9 @@
-<build> 
+<build
+    xmlns:python="http://bitten.edgewall.org/tools/python"
+    xmlns:svn="http://bitten.edgewall.org/tools/svn"
+    xmlns:c="http://bitten.edgewall.org/tools/c"
+    xmlns:sh="http://bitten.edgewall.org/tools/sh"
+    >
 
     <step id="checkout" description="checkout source from repository">
         <svn:checkout url="file:///${svn:repo}" path="trunk" revision="${svn:rev}" />
