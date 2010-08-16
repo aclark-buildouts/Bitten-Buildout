@@ -1,8 +1,7 @@
 <build> 
 
     <step id="checkout" description="checkout source from repository">
-        <svn:checkout url="file:///${svn:repo}"
-            path="trunk" revision="${svn:rev}" />
+        <svn:checkout url="file:///${svn:repo}" path="trunk" revision="${svn:rev}" />
     </step>
 
     <step id="pep8" description="Run PEP8">
