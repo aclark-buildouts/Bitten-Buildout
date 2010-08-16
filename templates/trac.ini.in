@@ -30,10 +30,10 @@ max_diff_files = 0
 wiki_format_messages = true
 
 [header_logo]
-alt = (please configure the [header_logo] section in trac.ini)
+alt = Bitten Logo
 height = -1
-link = 
-src = site/your_project_logo.png
+link = /${project:name}
+src = site/bitten_logo_small.png
 width = -1
 
 [inherit]
@@ -174,7 +174,7 @@ mainnav = wiki,timeline,roadmap,browser,tickets,newticket,search
 metanav = login,logout,prefs,help,about
 permission_policies = DefaultPermissionPolicy, LegacyAttachmentPolicy
 permission_store = DefaultPermissionStore
-repository_dir = 
+repository_dir = ${buildout:directory}/repo
 repository_type = svn
 secure_cookies = False
 show_email_addresses = false
