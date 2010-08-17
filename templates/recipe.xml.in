@@ -10,7 +10,7 @@
     </step>
 
     <step id="pep8" description="Run PEP8">
-        <sh:exec executable="${pep8:script}" />
+        <sh:exec executable="${buildout:directory}/run.sh" />
     </step>
 
 </build>
