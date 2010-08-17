@@ -11,7 +11,7 @@ for path, subdirs, files in os.walk('${source-download:location}'):
         pyfiles.append(os.path.join(path, file))
 
 for file in pyfiles:
-    arglist = ['-qq', file]
+    arglist = ['', file]
     pep8.process_options(arglist)
     pep8.input_file(file)
     results[file] = pep8.get_error_statistics(), pep8.get_warning_statistics()
