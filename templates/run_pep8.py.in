@@ -1,5 +1,6 @@
 import os
 import pep8
+import pprint
 import fnmatch
 
 pyfiles = []
@@ -15,4 +16,4 @@ for file in pyfiles:
     pep8.input_file(file)
     results[file] = [pep8.get_error_statistics(), pep8.get_warning_statistics()]
 
-print results
+pprint results
