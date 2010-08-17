@@ -2,13 +2,14 @@ import os
 import pep8
 import fnmatch
 
+pyfiles = []
 results = {}
 
 for path, subdirs, files in os.walk('${source-download:location}'):
     for file in fnmatch.filter(files, '*.py'):
-        results.append(os.path.join(path, file))
+        pyfiles.append(os.path.join(path, file))
 
-for file in results:
+for file in pyfiles:
     arglist = ['-qq', file]
     pep8.process_options(arglist)
     pep8.input_file(file)
