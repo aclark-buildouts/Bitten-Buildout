@@ -1,9 +1,12 @@
 import os
 import pep8
-for file in os.walk('${source-download:location}', '*', '*.py'):
-    arglist = ['-qq', file]
-    pep8.process_options(arglist)
-    pep8.input_file(file)
-    error_stats = pep8.get_error_statistics()
-    warning_stats = pep8.get_warning_statistics()
-
+import fnmatch
+results = []
+for path, subdirs, files in os.walk('${source-download:location}'):
+    for file in fnmatch.filter(files, '*.py'):
+        results.append(os.path.join(path, file))
+        arglist = ['-qq', file]
+        pep8.process_options(arglist)
+        pep8.input_file(file)
+        error_stats = pep8.get_error_statistics()
+        warning_stats = pep8.get_warning_statistics()
