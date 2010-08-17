@@ -16,4 +16,4 @@ for file in pyfiles:
     pep8.input_file(file)
     results[file] = pep8.get_error_statistics(), pep8.get_warning_statistics()
 
-pprint(results, indent=4)
+pprint(results)
