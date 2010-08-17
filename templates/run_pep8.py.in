@@ -1,7 +1,6 @@
 import os
 import pep8
 for file in os.listdir("${source-download:location}"):
-    filepath = file
     arglist = ['-qq', file]
     pep8.process_options(arglist)
     pep8.input_file(file)
