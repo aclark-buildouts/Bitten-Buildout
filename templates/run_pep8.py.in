@@ -3,6 +3,8 @@ import pep8
 import fnmatch
 from pprint import pprint
 
+args = ${pep8:ignore}
+
 pyfiles = []
 results = {}
 
@@ -11,9 +13,7 @@ for path, subdirs, files in os.walk('${source-download:location}'):
         pyfiles.append(os.path.join(path, file))
 
 for file in pyfiles:
-    arglist = ['', file]
+    arglist = [args, file]
     pep8.process_options(arglist)
     pep8.input_file(file)
     results[file] = pep8.get_error_statistics(), pep8.get_warning_statistics()
-
-pprint(results)
