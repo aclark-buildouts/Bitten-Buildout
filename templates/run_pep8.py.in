@@ -8,7 +8,7 @@ args = ${pep8:ignore}
 pyfiles = []
 results = {}
 
-for path, subdirs, files in os.walk('${source-download:location}'):
+for path, subdirs, files in os.walk('${django-project:location}'):
     for file in fnmatch.filter(files, '*.py'):
         pyfiles.append(os.path.join(path, file))
 
