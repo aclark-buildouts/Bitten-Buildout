@@ -10,8 +10,8 @@
         <svn:checkout url="file:///${svn:repo}" path="trunk" /> 
     </step>
 
-    <step id="pep8" description="Run PEP8">
-        <sh:exec executable="${buildout:directory}/ci_step_010.sh" />
+    <step id="ci_step_010" description="Run PEP8">
+        <sh:exec executable="bin/ci" args="ci-pep8.py/>
     </step>
 
 </build>

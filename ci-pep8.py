@@ -10,7 +10,7 @@ results = {}
 
 for path, subdirs, files in os.walk('src/django-project'):
     for file in fnmatch.filter(files, '*.py'):
-        pyfiles.append(os.path.join(path, file))
+        pyfiles.append(os.path.join(path, file)) 
 
 for file in pyfiles:
     arglist = [args, file]
