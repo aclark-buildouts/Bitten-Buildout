@@ -11,7 +11,7 @@
     </step>
 
     <step id="bootstrap"> 
-        <python:exec executable="bootstrap.py" args="-d" />
+        <python:exec file="bootstrap.py" args="-d" />
     </step>
 
     <step id="buildout"> 
