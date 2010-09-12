@@ -11,7 +11,7 @@
     </step>
 
     <step id="ci_step_010" description="Run PEP8">
-        <sh:exec executable="bin/ci" args="ci-pep8.py/>
+        <sh:exec executable="bin/ci" args="ci-pep8.py" />
     </step>
 
 </build>
