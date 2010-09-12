@@ -3,12 +3,12 @@ import pep8
 import fnmatch
 from pprint import pprint
 
-args = ${pep8:ignore}
+args = '--ignore=E501'
 
 pyfiles = []
 results = {}
 
-for path, subdirs, files in os.walk('${django-project:location}'):
+for path, subdirs, files in os.walk('src/django-project'):
     for file in fnmatch.filter(files, '*.py'):
         pyfiles.append(os.path.join(path, file))
 
