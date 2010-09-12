@@ -19,7 +19,7 @@
     </step>
 
     <step id="pep8"> 
-        <sh:exec executable="bin/ci" args="ci-pep8.py" />
+        <sh:exec executable="bin/ci_step_010.sh" />
     </step>
 
 </build>
