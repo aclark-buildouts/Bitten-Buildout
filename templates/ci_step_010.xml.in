@@ -6,11 +6,19 @@
     xmlns:sh="http://bitten.edgewall.org/tools/sh"
     >
 
-    <step id="checkout" description="checkout source from repository">
+    <step id="checkout"> 
         <svn:checkout url="file:///${svn:repo}" path="trunk" /> 
     </step>
 
-    <step id="ci_step_010" description="Run PEP8">
+    <step id="bootstrap"> 
+        <python:exec executable="bootstrap.py" args="-d" />
+    </step>
+
+    <step id="buildout"> 
+        <sh:exec executable="bin/buildout" /> 
+    </step>
+
+    <step id="pep8"> 
         <sh:exec executable="bin/ci" args="ci-pep8.py" />
     </step>
 
