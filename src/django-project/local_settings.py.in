@@ -9,10 +9,3 @@ from settings import (ADMINS, MANAGERS, DATABASE_ENGINE, DATABASE_NAME, DATABASE
 INSTALLED_APPS = INSTALLED_APPS + (
     ${local_settings:apps}
     )
-
-apps = []
-for app in INSTALLED_APPS:
-    if app is not 'django.contrib.admin':
-        apps.append(app)
-
-INSTALLED_APPS = tuple(apps)
