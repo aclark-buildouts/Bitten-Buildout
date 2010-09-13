@@ -26,7 +26,7 @@ To install the demo, do this::
 Then:
 
     - Create a test configuration in Admin -> Configurations in Trac
-    - Cut and paste ``ci-recipe.xml`` into the recipe field.
+    - Cut and paste ``recipe.xml`` into the recipe field.
     - Select ``trunk`` for the path.
     - Create a target platform for localhost (e.g. os =~ Darwin)
 
