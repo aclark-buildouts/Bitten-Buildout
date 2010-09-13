@@ -6,7 +6,8 @@ This buildout demonstrates the use of Bitten for continuous integration and prov
 Prerequisites
 -------------
 
-You will need a Python with the Subversion bindings installed. If you do not have that handy, check out:
+You will need a Python with the Subversion bindings installed. If you do not
+have one handy, check out:
 
     - http://github.com/aclark4life/Subversion-Python-Buildout
 
