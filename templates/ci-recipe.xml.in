@@ -19,7 +19,7 @@
     </step>
 
     <step id="pep8"> 
-        <sh:exec executable="ci-pep8.sh" />
+        <sh:exec executable="${buildout:directory}/ci-pep8.sh" />
     </step>
 
 </build>
