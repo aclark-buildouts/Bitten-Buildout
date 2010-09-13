@@ -18,10 +18,11 @@ Install
 
 To install the demo, do this::    
 
-    $ git clone git://github.com/aclark4life/Subversion-Python-Buildout.git
-    $ /path/to/python/with/svn/bindings/bin/python bootstrap.py
+    $ git clone git://github.com/aclark4life/Bitten-Buildout.git
+    $ cd Bitten-Buildout
+    $ /path/to/python/with/svn/bindings/bin/python bootstrap.py -d
     $ bin/buildout
-    $ bin/supervisord -e debug -n
+    $ bin/supervisord
 
 Then:
 
