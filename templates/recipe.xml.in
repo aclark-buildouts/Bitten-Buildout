@@ -7,7 +7,7 @@
     >
 
     <step id="checkout"> 
-        <svn:checkout url="file:///${svn:repo}" path="trunk" /> 
+        <svn:checkout url="file:///${svn:repo}" path="trunk/southtut" /> 
     </step>
 
     <step id="bootstrap"> 
