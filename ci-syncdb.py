@@ -1,5 +1,4 @@
 import commands
-import re
 
 SUCCESS=0
 FAILURE=-1
@@ -12,8 +11,7 @@ check_for = south_failure, generic_traceback
 results = commands.getoutput('bin/django syncdb --migrate')
 
 for error in check_for:
-    pattern = re.compile(error)
-    if not pattern.match(results):
+    if not results.find(error) == -1:
         print results
         exit(SUCCESS)
     else:
