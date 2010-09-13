@@ -1,0 +1,11 @@
+import commands
+import re
+
+south_failure = 'these migrations are in the database but not on disk'
+pattern = re.compile(south_failure)
+results = commands.getoutput('bin/django syncdb --migrate')
+
+if not results.match(pattern):
+    return True
+else:
+    return False
