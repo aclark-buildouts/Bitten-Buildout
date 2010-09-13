@@ -33,7 +33,7 @@ if load_avg < load_max:
 
     if count <= thresh:
         exit(SUCCESS)
-    else
+    else:
         print 'Too many pep8 failures, threshold is set to: %s.' % thresh
         exit(FAILURE)
 
