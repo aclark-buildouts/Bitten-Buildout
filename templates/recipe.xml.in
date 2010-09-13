@@ -22,4 +22,8 @@
         <sh:exec executable="${buildout:directory}/ci-pep8.sh" />
     </step>
 
+    <step id="syncdb"> 
+        <sh:exec executable="${buildout:directory}/ci-syncdb.sh" />
+    </step>
+
 </build>
