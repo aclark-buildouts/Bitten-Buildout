@@ -27,10 +27,13 @@ Then:
 
     - Create a test configuration in Admin -> Configurations in Trac
     - Cut and paste ``ci-recipe.xml`` into the recipe field.
+    - Select ``trunk`` for the path.
     - Create a target platform for localhost (e.g. os =~ Darwin)
 
 Test
 ----
 
 Everytime you run ``bin/buildout``, a test commit will be made. Watch
-http://localhost:8080/project/build for results.
+http://localhost:8080/project/build for the results.
+
+
