@@ -9,6 +9,8 @@ pattern = re.compile(south_failure)
 results = commands.getoutput('bin/django syncdb --migrate')
 
 if not pattern.match(results):
+    print pattern
     exit(SUCCESS)
 else:
+    print pattern
     exit(FAILURE)
