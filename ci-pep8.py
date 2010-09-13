@@ -14,7 +14,9 @@ line = ('----------------------------------------' +
 
 load_max = 4
 load_avg = os.getloadavg()[0]
-thresh = 0
+
+# Allow 2000 pep8 errors before we complain
+thresh = 2000
 
 if load_avg < load_max:
     for path, subdirs, files in os.walk('.'):
