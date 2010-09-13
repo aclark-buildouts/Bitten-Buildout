@@ -17,7 +17,7 @@ load_avg = os.getloadavg()[0]
 thresh = 0
 
 if load_avg < load_max:
-    for path, subdirs, files in os.walk('./src'):
+    for path, subdirs, files in os.walk('src/django-project'):
         for file in fnmatch.filter(files, '*.py'):
             pyfiles.append(os.path.join(path, file))
     count = 0
