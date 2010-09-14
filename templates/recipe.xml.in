@@ -15,7 +15,7 @@
     </step>
 
     <step id="buildout"> 
-        <sh:exec executable="bin/buildout" /> 
+        <sh:exec executable="bin/buildout" args="${:config}/> 
     </step>
 
     <step id="syncdb"> 
