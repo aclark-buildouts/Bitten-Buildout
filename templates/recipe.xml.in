@@ -18,16 +18,6 @@
         <sh:exec executable="bin/buildout" /> 
     </step>
 
-    <step id="pep8"> 
-        <!-- bin/ci is just a Python interpreter with CI packages in sys.path e.g. pep8 -->
-        <sh:exec executable="bin/ci" args="${buildout:directory}/ci-pep8.py" />
-    </step>
-
-    <step id="syncdb"> 
-        <!-- bin/ci is just a Python interpreter with CI packages in sys.path e.g. pep8 -->
-        <sh:exec executable="bin/ci" args="${buildout:directory}/ci-syncdb.py" />
-    </step>
-
     <step id="syncdb"> 
         <sh:exec executable="${buildout:directory}/ci-syncdb.sh" />
     </step>
